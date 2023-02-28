@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Streching</title>
+    <style>
+      .container {
+        width: 50%;
+        max-width: 450px;
+        display: block;
+        padding: 30px 35px 30px 35px;
+        background-image: radial-gradient(
+          circle at 10% 20%,
+          rgb(255, 246, 236) 39.5%,
+          rgba(100, 46, 122, 0.23) 100.2%
+        );
+        border-radius: 8px;
+        margin: 30px auto;
+        color: #632d94;
+        font-family: "Cerebri Sans", Helvetica, Arial, sans-serif;
+      }
+
+      h1 {
+        text-transform: uppercase;
+        font-weight: lighter;
+        text-align: center;
+        border: 1px solid white;
+        border-radius: 4px;
+        padding: 20px 10px;
+        font-size: 29px;
+      }
+      h2 {
+        font-weight: lighter;
+        text-align: center;
+        font-size: 17px;
+      }
+      p {
+        font-weight: lighter;
+        text-align: justify;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+      .more-info {
+        margin: 0 auto;
+        text-align: start;
+        font-size: 12px;
+        font-weight: lighter;
+        line-height: 1.5;
+      }
+      .link-wiki {
+        color: #632d94;
+        text-decoration: none;
+        font-family: "Cerebri Sans", Helvetica, Arial, sans-serif;
+      }
+      .link-wiki:hover {
+        text-decoration: underline;
+      }
+      button {
+        font-weight: lighter;
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+        border-radius: 40px;
+        padding: 15px 20px;
+        font-size: 12px;
+        border: 1px solid #ffffff;
+        background-color: transparent;
+        color: #632d94;
+        font-family: "Cerebri Sans", Helvetica, Arial, sans-serif;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+      }
+      button:hover {
+        background-color: #c4c1e0;
+        color: #ffffff;
+        transition: all 200ms;
+        cursor: pointer;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        width: 350px;
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+      }
+      hr {
+        border: 0;
+        height: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>I love Stretching</h1>
+      <h2>Dynamic stretching is my favourite type of streching</h2>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/047/033/original/stretches_women_workout.gif?1664309528"
+        alt="woman streching"
+      />
+      <p>
+        <span>
+          <strong>Streching</strong>
+        </span>
+        is a form of physical exercise in which a specific muscle or tendon (or
+        muscle group) is deliberately flexed or stretched in order
+        <span>
+          <em>
+            to improve the muscle's felt elasticity and achieve comfortable
+            muscle tone.
+          </em></span
+        >
+        The result is a feeling of increased muscle control, flexibility, and
+        range of motion.
+      </p>
+      <span class="more-info">
+        Check more info on
+        <a
+          class="link-wiki"
+          href="https://en.wikipedia.org/wiki/Stretching"
+          target="_blank"
+        >
+          <strong> Wiki</strong></a
+        >
+        and remember
+        <span class="stretch-quote">
+          <em> "More stretching, less stressing!" </em></span
+        >
+      </span>
+      <br />
+      <button class="sign-up-button">Free stretching class</button>
+    </div>
+    <script>
+      function signUp() {
+        let name = prompt("What is your name?");
+        let email = prompt("Enter your email address, please.");
+        if (name.length === 0 && email.length === 0) {
+          alert(
+            "No free stretching class for you ☹️. Please provide your details first."
+          );
+        } else {
+          alert(
+            `Thank you ${name}, we will be in touch with you via email! You can now make 3 deep breathes and relax. 😌 `
+          );
+        }
+      }
+      let signButton = document.querySelector(".sign-up-button");
+      signButton.addEventListener("click", signUp);
+    </script>
+  </body>
+</html>
